@@ -37,6 +37,7 @@ app.get('/api/dogs', async(req, res) => {
     try {
 
     } catch (err) {
-        
+        console.error('Error getting dogs:', err.message);
+        res.status(500).json()
     }
 })
