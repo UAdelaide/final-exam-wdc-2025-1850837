@@ -55,4 +55,6 @@ CREATE TABLE WalkRatings (
 );
 
 INSERT INTO Users
-    (username, email, )
+    (username, email, password_hash, role)
+VALUES
+    (ali)
