@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/index', function(req, res, next) {
+  console.log(__direname);
   res.sendFile(path.join(__dirname, 'part1/views/index.html'));
 });
 
