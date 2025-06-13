@@ -33,4 +33,10 @@ async function connectToDatabase(){
 connectToDatabase();
 
 // endpoints
-app.get('/api/dogs', a)
+app.get('/api/dogs', async(req, res) => {
+    try {
+
+    } catch (err) {
+        
+    }
+})
