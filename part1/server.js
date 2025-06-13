@@ -90,7 +90,7 @@ router.get('/api/walkers/summary', async(req, res) => {
             WHERE
                 u.role='walker'
             GROUP BY
-                u.user_id, 
+                u.user_id, u.username;
     `);
     res.json({
         data: rows
