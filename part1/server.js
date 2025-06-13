@@ -16,3 +16,7 @@ const dbConfig = {
 
 let connection;
 
+app.use(express.json());
+
+const sqlSchemaPath = path.join(__dirname, SQL_SCHEMA_FILE);
+
