@@ -59,6 +59,6 @@ INSERT INTO Users
 VALUES
     ('alice123','alice@example.com','hashed123','owner'),
     ('bobwalker','bob@example.com','hashed456','walker'),
-    ('carol123','carol@example.com,hashed789,'owner'),
-    (deliaw,delia@example.com,password123,'walker'),
-    (elliott1,elliott@example.com,password456,'owner');
+    ('carol123','carol@example.com','hashed789','owner'),
+    ('deliaw','delia@example.com','password123','walker'),
+    ('elliott1','elliott@example.com,password456,'owner');
