@@ -62,3 +62,4 @@ VALUES
     ('carol123','carol@example.com','hashed789','owner'),
     ('deliaw','delia@example.com','password123','walker'),
     ('elliott1','elliott@example.com','password456','owner');
+
