@@ -55,7 +55,12 @@ router.get('/api/dogs', async(req, res) => {
 router.get('/api/walkrequests/open', async(req, res) => {
     try {
         const [rows] = await connection.execute(`
-            `)
+            SELECT WalkRequests.request_id, Dogs.name as dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username
+            FROM WalkRequests
+            INNER JOIN Dogs ON WalkRequests.dog_id=Dogs.dog_id
+            INNER JOIN Users ON Dogs.owner_id=Users.user_id
+            WHERE WalkRequests.status='open';
+    `);
     } catch (err) {
         console.error('Error getting walkrequests:', err.message);
         res.status(500).json({ error: 'Failed to retrieve walkrequests' });
