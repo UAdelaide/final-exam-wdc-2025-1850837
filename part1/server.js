@@ -56,6 +56,7 @@ router.get('/api/walkrequests/open', async(req, res) => {
     try {
 
     } catch (err) {
-        console.error('Error getting walkrequests')
+        console.error('Error getting walkrequests:', err.message);
+        res.status(500).json()
     }
 })
