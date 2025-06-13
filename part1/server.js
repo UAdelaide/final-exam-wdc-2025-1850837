@@ -36,7 +36,9 @@ connectToDatabase();
 app.get('/api/dogs', async(req, res) => {
     try {
         const [rows] = await connection.execute(`
-            SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id;
+            SELECT Dogs.name, Dogs.size, Users.username
+            FROM Dogs
+            INNER JOIN Users ON Dogs.owner_id=Users.user_id;
             `)
     } catch (err) {
         console.error('Error getting dogs:', err.message);
