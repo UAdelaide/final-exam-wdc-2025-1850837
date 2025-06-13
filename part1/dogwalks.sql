@@ -63,3 +63,7 @@ VALUES
     ('deliaw','delia@example.com','password123','walker'),
     ('elliott1','elliott@example.com','password456','owner');
 
+INSERT INTO Dogs
+    (name, size)
+VALUES
+    ()
