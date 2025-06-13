@@ -5,4 +5,8 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-const SQL_SCHEMA_FILE = 'dogwalks.sql'
+const SQL_SCHEMA_FILE = 'dogwalks.sql';
+
+const dbConfig = {
+    host: 'localhost'
+}
