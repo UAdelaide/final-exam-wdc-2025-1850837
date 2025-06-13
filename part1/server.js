@@ -62,9 +62,12 @@ router.get('/api/walkrequests/open', async(req, res) => {
             INNER JOIN Users ON Dogs.owner_id=Users.user_id
             WHERE WalkRequests.status='open';
     `);
-    r
+    res.json({
+        data: rows
+    });
     } catch (err) {
         console.error('Error getting walkrequests:', err.message);
         res.status(500).json({ error: 'Failed to retrieve walkrequests' });
     }
 });
+
