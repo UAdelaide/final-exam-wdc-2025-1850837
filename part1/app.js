@@ -23,7 +23,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // get database on startup
-app.on('listening', function())
+app.on('listening', function() {
+
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
