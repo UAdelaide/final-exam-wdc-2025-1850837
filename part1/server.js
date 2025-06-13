@@ -33,4 +33,4 @@ async function connectToDatabase(){
 connectToDatabase();
 
 // endpoints
-app.get('')
+app.get('/api/dogs', a)
