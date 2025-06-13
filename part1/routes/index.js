@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 const path = require("path");
 const app = express();
 
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.static(path.join(__dirname, "views")));
 app.listen(8080);
 
 module.exports = router;
