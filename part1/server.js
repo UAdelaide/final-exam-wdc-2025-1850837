@@ -54,7 +54,8 @@ router.get('/api/dogs', async(req, res) => {
 
 router.get('/api/walkrequests/open', async(req, res) => {
     try {
-        
+        const [rows] = await connection.execute(`
+            `)
     } catch (err) {
         console.error('Error getting walkrequests:', err.message);
         res.status(500).json({ error: 'Failed to retrieve walkrequests' });
