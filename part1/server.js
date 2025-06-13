@@ -8,5 +8,8 @@ const port = 3000;
 const SQL_SCHEMA_FILE = 'dogwalks.sql';
 
 const dbConfig = {
-    host: 'localhost'
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database 
 }
