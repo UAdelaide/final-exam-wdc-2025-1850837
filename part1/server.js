@@ -31,3 +31,6 @@ async function connectToDatabase(){
 }
 
 connectToDatabase();
+
+// endpoints
+app
