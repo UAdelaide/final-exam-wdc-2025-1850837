@@ -52,4 +52,10 @@ router.get('/api/dogs', async(req, res) => {
     }
 });
 
-router.get('/api/walkrequests/open', aysyn)
+router.get('/api/walkrequests/open', async(req, res) => {
+    try {
+
+    } catch (err) {
+        console.error('Error getting walkrequests')
+    }
+})
