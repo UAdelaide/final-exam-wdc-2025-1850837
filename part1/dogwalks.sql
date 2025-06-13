@@ -55,7 +55,7 @@ CREATE TABLE WalkRatings (
 );
 
 INSERT INTO Users
-    (username,email,password_hash,role)
+    (username, email, password_hash, role)
 VALUES
     ('alice123','alice@example.com','hashed123','owner'),
     ('bobwalker','bob@example.com','hashed456','walker'),
@@ -73,4 +73,4 @@ VALUES
     ((SELECT user_id FROM Users WHERE username='elliott1'),'Kettle','large');
 
 INSERT INTO WalkRequests
-    (dog_id, reque)
+    (dog_id, requested_time, duration_minutes, location, status)
