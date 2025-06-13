@@ -44,8 +44,8 @@ router.get('/api/dogs', async(req, res) => {
             INNER JOIN Users ON Dogs.owner_id=Users.user_id;
             `);
             res.json({
-                message:
-            })
+                data: rows
+            });
     } catch (err) {
         console.error('Error getting dogs:', err.message);
         res.status(500).json({ error: 'Failed to retrieve dogs' });
