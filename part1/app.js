@@ -31,8 +31,9 @@ app.use('/users', usersRouter);
 
 // connect to database
 con.connect(function(err) {
-  
-})
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
