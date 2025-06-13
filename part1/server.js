@@ -32,8 +32,10 @@ async function connectToDatabase(){
 
 connectToDatabase();
 
+var router = express.Router();
+
 // endpoints
-app.get('/api/dogs', async(req, res) => {
+router.get('/api/dogs', async(req, res) => {
     try {
         const [rows] = await connection.execute(`
             SELECT Dogs.name as dog_name, Dogs.size, Users.username as owner_username
