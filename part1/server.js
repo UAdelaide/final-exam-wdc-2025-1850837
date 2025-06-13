@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql12/promise');
 const fs = require('fs');
 const path = require('path');
+const dogwalksRouter = require('./routes/index');
 
 const app = express();
 const port = 3000;
