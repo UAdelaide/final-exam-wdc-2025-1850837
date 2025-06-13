@@ -11,7 +11,7 @@ var app = express();
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
-
+const __direname = path.direname(__filename);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
