@@ -11,5 +11,8 @@ const dbConfig = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 
-}
+    database: 'DogWalkService'
+};
+
+let connection;
+
