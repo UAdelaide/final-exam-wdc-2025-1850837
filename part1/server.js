@@ -82,6 +82,9 @@ router.get('/api/walkers/summary', async(req, res) => {
             FROM
                 Users u
             LEFT JOIN
+                WalkApplications wa ON u.user_id = wa.walker_id
+            LEFT JOIN
+                WalkRequests 
     `);
     res.json({
         data: rows
