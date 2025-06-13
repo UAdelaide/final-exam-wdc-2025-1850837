@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-
+import {part1/views/index.html} from 'url';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
