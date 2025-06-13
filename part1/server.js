@@ -74,7 +74,8 @@ router.get('/api/walkrequests/open', async(req, res) => {
 router.get('/api/walkers/summary', async(req, res) => {
     try {
         const [rows] = await connection.execute(`
-            FROM Users u
+            SELECT
+                u.
     `);
     res.json({
         data: rows
