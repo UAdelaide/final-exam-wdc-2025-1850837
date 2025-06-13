@@ -35,7 +35,9 @@ connectToDatabase();
 // endpoints
 app.get('/api/dogs', async(req, res) => {
     try {
-        
+        const [rows] = await connection.execute(`
+            
+            `)
     } catch (err) {
         console.error('Error getting dogs:', err.message);
         res.status(500).json({ error: 'Failed to retrieve dogs' });
