@@ -28,4 +28,6 @@ async function connectToDatabase(){
         console.error('Failed to connect:', err.message);
         process.exit(1);
     }
-};
+}
+
+connectToDatabase();
