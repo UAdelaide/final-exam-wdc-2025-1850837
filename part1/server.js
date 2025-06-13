@@ -78,7 +78,7 @@ router.get('/api/walkers/summary', async(req, res) => {
                 u.username AS walker_username,
                 COALESCE(COUNT(wr.rating_id), 0) AS total_ratings,
                 AVG(wr.rating) AS average_rating,
-                COALESCE(COUNT(CASE WHEN wa.status='accepted' AND wreq.status='completed' THEN ))
+                COALESCE(COUNT(CASE WHEN wa.status='accepted' AND wreq.status='completed' THEN wreq.request_id ELSE NULL END), 0) AS completed_walks
     `);
     res.json({
         data: rows
