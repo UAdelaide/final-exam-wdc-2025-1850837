@@ -9,6 +9,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/index', function(req, res, next) {
   res.sendFile(path.join(__dirname, 'part1/views/index.html'));
-})
+});
 
 module.exports = router;
