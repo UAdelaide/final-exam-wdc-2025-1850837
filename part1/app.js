@@ -14,7 +14,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: ""
-})
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +30,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // connect to database
-
+con.connect(function(err) {
+  
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
