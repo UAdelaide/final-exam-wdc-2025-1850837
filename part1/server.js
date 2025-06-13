@@ -20,4 +20,8 @@ app.use(express.json());
 
 const sqlSchemaPath = path.join(__dirname, SQL_SCHEMA_FILE);
 
-async 
+async function connectToDatabase(){
+    try(
+        connection = await mysql.createConnection(dbConfig);
+    )
+}
