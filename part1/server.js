@@ -86,7 +86,11 @@ router.get('/api/walkers/summary', async(req, res) => {
             LEFT JOIN
                 WalkRequests wreq ON wa.request_id = wreq.request_id
             LEFT JOIN
-                
+                WalkRatings wr ON u.user_id = wr.walker_id
+            WHERE
+                u.role='walker'
+            GROUP BY
+                u.user_id, 
     `);
     res.json({
         data: rows
