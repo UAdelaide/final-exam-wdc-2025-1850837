@@ -39,7 +39,7 @@ app.get('/api/dogs', async(req, res) => {
             SELECT Dogs.name as dog_name, Dogs.size, Users.username as owner_username
             FROM Dogs
             INNER JOIN Users ON Dogs.owner_id=Users.user_id;
-            `)
+            `);
     } catch (err) {
         console.error('Error getting dogs:', err.message);
         res.status(500).json({ error: 'Failed to retrieve dogs' });
