@@ -25,6 +25,7 @@ async function connectToDatabase(){
         connection = await mysql.createConnection(dbConfig);
         console.log('Connected to MySQL database:', dbConfig.database);
     ) catch (err) {
-        
+        console.error('Failed to connect:', err.message);
+        process.exit(1);
     }
 }
