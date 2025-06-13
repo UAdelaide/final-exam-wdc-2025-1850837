@@ -64,6 +64,6 @@ VALUES
     ('elliott1','elliott@example.com','password456','owner');
 
 INSERT INTO Dogs
-    (name, size)
+    (owner_id, name, size)
 VALUES
     ()
