@@ -33,7 +33,7 @@ async function connectToDatabase(){
 connectToDatabase();
 
 // endpoints
-router.get('/api/dogs', async(req, res) => {
+app.get('/api/dogs', async(req, res) => {
     try {
         const [rows] = await connection.execute(`
             SELECT Dogs.name as dog_name, Dogs.size, Users.username as owner_username
