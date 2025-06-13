@@ -76,7 +76,8 @@ router.get('/api/walkers/summary', async(req, res) => {
         const [rows] = await connection.execute(`
             SELECT
                 u.username AS walker_username,
-                COALESCE(COUNT(wr.rating_id))
+                COALESCE(COUNT(wr.rating_id), 0) AS total_ratings,
+                
     `);
     res.json({
         data: rows
