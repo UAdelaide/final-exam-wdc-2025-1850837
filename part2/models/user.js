@@ -1,3 +1,3 @@
 const getDb = require('./db');
 
-// Function to l
+// Function to log users in
