@@ -1,1 +1,3 @@
-const getDB 
+const getDb = require('./db');
+
+// Function to l
