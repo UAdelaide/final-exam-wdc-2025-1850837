@@ -211,3 +211,5 @@ function logout(){
     xmlhttp.send();
 
 }
+
+// Function that checks if the 
