@@ -212,4 +212,4 @@ function logout(){
 
 }
 
-// Function that checks if the 
+// Function that checks if the input was correct, and if so returns the type of user
